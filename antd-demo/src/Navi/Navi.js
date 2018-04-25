@@ -1,8 +1,12 @@
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link  } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import logo from '../logo.svg';
 import './Navi.css'
+import AddClass from '../AddClass/AddClass'
+import AddStudent from '../AddStudent/AddStudent'
+import ShowAll from '../ShowAll/ShowAll'
 const { Header, Content, Footer, Sider } = Layout;
 
 class SiderDemo extends Component {
@@ -19,6 +23,7 @@ class SiderDemo extends Component {
 
     render() {
         return (
+          <Router>
             <Layout>
                 <Sider
                     trigger={null}
@@ -28,16 +33,22 @@ class SiderDemo extends Component {
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
-                            <Icon type="user" />
-                            <span className="nav-text">nav 1</span>
+                            <Link to="/classEntry">
+                              <Icon type="user" />
+                              <span className="nav-text">班级录入</span>
+                            </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
+                          <Link to="/studentEntry">
                             <Icon type="video-camera" />
-                            <span className="nav-text">nav 2</span>
+                            <span className="nav-text">学生录入</span>
+                          </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
+                          <Link to="/ShowAll">
                             <Icon type="upload" />
-                            <span className="nav-text">nav 3</span>
+                            <span className="nav-text">数据统计</span>
+                          </Link>
                         </Menu.Item>
                     </Menu>
                 </Sider>
@@ -51,25 +62,22 @@ class SiderDemo extends Component {
                                 style={{cursor: 'pointer'}}
                             />
                         </span>
-                        <span style={{color:'#fff', paddingLeft:'2%', fontSize:'1.4em'}}>Information Management System</span>
+                        <span style={{color:'#fff', paddingLeft:'2%', fontSize:'1.4em'}}>班级人员管理系统</span>
                         <span style={{color:'#fff', float:'right', paddingRight:'1%'}}>
                             <img src={logo} className="App-logo" alt="logo" />
                         </span>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
-                        <Breadcrumb style={{ margin: '12px 0' }}>
-                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                        </Breadcrumb>
-                        <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
-
-                        </div>
+                        <Route path="/classEntry" component={AddClass} />
+                        <Route path="/studentEntry" component={AddStudent} />
+                        <Route path="/ShowAll" component={ShowAll} />
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        Ant Design ©2016 Created by Ant UED
+                        Ant Design ©2018 Created by limm
                     </Footer>
                 </Layout>
             </Layout>
+          </Router>
         );
     }
 }
