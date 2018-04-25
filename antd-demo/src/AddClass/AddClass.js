@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Breadcrumb } from 'antd';
-
+import WrappedRegistrationForm from '../AddClass/Form'
 class AddClass extends React.Component {
   render() {
 
@@ -11,7 +11,7 @@ class AddClass extends React.Component {
             <Breadcrumb.Item>班级录入</Breadcrumb.Item>
         </Breadcrumb>
         <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
-            这里方式发大水
+            <WrappedRegistrationForm/>
         </div>
       </div>
     );

@@ -33,19 +33,19 @@ class SiderDemo extends Component {
                     <div className="logo" />
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
-                            <Link to="/classEntry">
+                            <Link to="/main/classEntry">
                               <Icon type="user" />
                               <span className="nav-text">班级录入</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
-                          <Link to="/studentEntry">
+                          <Link to="/main/studentEntry">
                             <Icon type="video-camera" />
                             <span className="nav-text">学生录入</span>
                           </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                          <Link to="/ShowAll">
+                          <Link to="/main/ShowAll">
                             <Icon type="upload" />
                             <span className="nav-text">数据统计</span>
                           </Link>
@@ -68,12 +68,12 @@ class SiderDemo extends Component {
                         </span>
                     </Header>
                     <Content style={{ margin: '0 16px' }}>
-                        <Route path="/classEntry" component={AddClass} />
-                        <Route path="/studentEntry" component={AddStudent} />
-                        <Route path="/ShowAll" component={ShowAll} />
+                        <Route path="/main/classEntry" component={AddClass} />
+                        <Route path="/main/studentEntry" component={AddStudent} />
+                        <Route path="/main/ShowAll" component={ShowAll} />
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
-                        Ant Design ©2018 Created by limm
+                         ©2018 Created by limm
                     </Footer>
                 </Layout>
             </Layout>
