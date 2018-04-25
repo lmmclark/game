@@ -94,7 +94,7 @@ class RegistrationForm extends React.Component {
       <Col span={8}>
           <FormItem
             {...formItemLayout}
-            label="年级"
+            label="班级"
             hasFeedback
           >
             {getFieldDecorator('email', {
@@ -163,11 +163,11 @@ class RegistrationForm extends React.Component {
         <Col span={8}>
         <FormItem
           {...formItemLayout}
-          label="Habitual Residence"
+          label="班级所在区域"
         >
           {getFieldDecorator('residence', {
             initialValue: ['zhejiang', 'hangzhou', 'xihu'],
-            rules: [{ type: 'array', required: true, message: 'Please select your habitual residence!' }],
+            rules: [{ type: 'array', required: true, message: '请输入班级所在区域！' }],
           })(
             <Cascader options={residences} />
           )}
@@ -176,10 +176,10 @@ class RegistrationForm extends React.Component {
         <Col span={8}>
         <FormItem
           {...formItemLayout}
-          label="Phone Number"
+          label="班主任手机"
         >
           {getFieldDecorator('phone', {
-            rules: [{ required: true, message: 'Please input your phone number!' }],
+            rules: [{ required: true, message: '请输入班主任手机号' }],
           })(
             <Input addonBefore={prefixSelector} />
           )}

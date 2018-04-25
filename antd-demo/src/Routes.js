@@ -12,7 +12,7 @@ import {
 // import App from './App'
 import Login from './Login/Login'
 import ShowAll from './ShowAll/ShowAll'
-import SiderDemo from './Navi/Navi'
+import Index from './Navi/Navi'
 //404
 // import NotFound from './components/NotFound';
 
@@ -23,8 +23,7 @@ class Routes extends Component {
                 <div style={{height: '100%'}}>
                     <Route exact path="/" component={Login}/>
                     <Route path="/login" component={Login}/>
-                    <Route path="/main" component={SiderDemo}/>
-                    <Route path="/main/classEntry" component={SiderDemo}/>
+                    <Route path="/main/classEntry" component={Index}/>
                 </div>
             </Router>
         )

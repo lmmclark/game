@@ -9,7 +9,7 @@ import AddStudent from '../AddStudent/AddStudent'
 import ShowAll from '../ShowAll/ShowAll'
 const { Header, Content, Footer, Sider } = Layout;
 
-class SiderDemo extends Component {
+class Index extends Component {
     state = {
         collapsed: false,
         mode: 'inline',
@@ -34,13 +34,13 @@ class SiderDemo extends Component {
                     <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
                             <Link to="/main/classEntry">
-                              <Icon type="user" />
+                              <Icon type="video-camera" />
                               <span className="nav-text">班级录入</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="2">
                           <Link to="/main/studentEntry">
-                            <Icon type="video-camera" />
+                            <Icon type="user" />
                             <span className="nav-text">学生录入</span>
                           </Link>
                         </Menu.Item>
@@ -82,4 +82,4 @@ class SiderDemo extends Component {
     }
 }
 
-export default SiderDemo;
+export default Index;
