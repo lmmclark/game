@@ -45,7 +45,7 @@ class Index extends Component {
                           </Link>
                         </Menu.Item>
                         <Menu.Item key="3">
-                          <Link to="/main/ShowAll">
+                          <Link to="/main/showAll">
                             <Icon type="upload" />
                             <span className="nav-text">数据统计</span>
                           </Link>
@@ -70,7 +70,7 @@ class Index extends Component {
                     <Content style={{ margin: '0 16px' }}>
                         <Route path="/main/classEntry" component={AddClass} />
                         <Route path="/main/studentEntry" component={AddStudent} />
-                        <Route path="/main/ShowAll" component={ShowAll} />
+                        <Route path="/main/showAll" component={ShowAll} />
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
                          ©2018 Created by limm

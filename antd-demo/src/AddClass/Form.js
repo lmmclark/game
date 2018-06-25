@@ -145,10 +145,7 @@ class RegistrationForm extends React.Component {
           {...formItemLayout}
           label={(
             <span>
-              班级口号&nbsp;
-              <Tooltip title="请输入班级口号！">
-                <Icon type="question-circle-o" />
-              </Tooltip>
+              班级口号
             </span>
           )}
           hasFeedback
@@ -185,45 +182,16 @@ class RegistrationForm extends React.Component {
           )}
         </FormItem>
         </Col>
+        <Col span={8}></Col>
         <Col span={8}>
-        <FormItem
-          {...formItemLayout}
-          label="Captcha"
-          extra="We must make sure that your are a human."
-        >
-          <Row gutter={8}>
-            <Col span={12}>
-              {getFieldDecorator('captcha', {
-                rules: [{ required: true, message: 'Please input the captcha you got!' }],
-              })(
-                <Input size="large" />
-              )}
-            </Col>
-            <Col span={12}>
-              <Button size="large">Get captcha</Button>
-            </Col>
-          </Row>
-        </FormItem>
-        </Col>
-
-        <Col span={10}>
-        <FormItem {...tailFormItemLayout} style={{ marginBottom: 8 ,marginTop:120}}>
-          {getFieldDecorator('agreement', {
-            valuePropName: 'checked',
-          })(
-            <Checkbox>I have read the <a>agreement</a></Checkbox>
-          )}
-        </FormItem>
-
-
-        <FormItem {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit" >录入</Button>
+        <FormItem {...tailFormItemLayout} style={{margin:'30px 0 0 120px'}}>
+          <Button type="primary" htmlType="submit" size="large">录入</Button>
         </FormItem>
         </Col>
       </Form>
     );
   }
-}
+}  
 
 const WrappedRegistrationForm = Form.create()(RegistrationForm);
 export default WrappedRegistrationForm

@@ -11,7 +11,12 @@ class AddStudent extends React.Component {
             <Breadcrumb.Item>学生录入</Breadcrumb.Item>
         </Breadcrumb>
         <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
-          阿萨德撒的
+          <div className="title">
+              <div className="colorHead"></div>
+              <div className = "headTitle">
+                  <span>学生录入</span>
+              </div>
+          </div>
         </div>
       </div>
     );

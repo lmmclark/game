@@ -11,8 +11,7 @@ import {
 // 根组件
 // import App from './App'
 import Login from './Login/Login'
-import ShowAll from './ShowAll/ShowAll'
-import Index from './Navi/Navi'
+import Navi from './Navi/Navi'
 //404
 // import NotFound from './components/NotFound';
 
@@ -22,8 +21,7 @@ class Routes extends Component {
             <Router>
                 <div style={{height: '100%'}}>
                     <Route exact path="/" component={Login}/>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/main/classEntry" component={Index}/>
+                    <Route path="/main" component={Navi}/>
                 </div>
             </Router>
         )

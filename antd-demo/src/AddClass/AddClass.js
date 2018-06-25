@@ -11,6 +11,12 @@ class AddClass extends React.Component {
             <Breadcrumb.Item>班级录入</Breadcrumb.Item>
         </Breadcrumb>
         <div style={{ padding: 24, background: '#fff', minHeight: 780 }}>
+          <div className="title">
+              <div className="colorHead"></div>
+              <div className = "headTitle">
+                  <span>班级录入</span>
+              </div>
+          </div>
             <WrappedRegistrationForm/>
         </div>
       </div>
